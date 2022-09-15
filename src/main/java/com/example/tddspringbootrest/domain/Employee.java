@@ -1,20 +1,32 @@
 package com.example.tddspringbootrest.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Employee {
-    public Employee(long id, String name, int age) {
+    @Id
+    private long id;
+    private String name;
+    private int age;
 
+    public Employee() {
     }
-
+    public Employee(long id, String name, int age) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+    }
     public long getId() {
-        return 0;
+        return id;
     }
 
     public String getName() {
-        return null;
+        return name;
     }
-
 
     public int getAge() {
-        return 0;
+        return age;
     }
+
 }
