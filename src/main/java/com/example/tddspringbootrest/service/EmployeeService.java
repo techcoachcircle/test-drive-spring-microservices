@@ -2,6 +2,7 @@ package com.example.tddspringbootrest.service;
 
 import com.example.tddspringbootrest.domain.Employee;
 import com.example.tddspringbootrest.domain.EmployeeRepository;
+import org.apache.commons.collections.IteratorUtils;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
@@ -14,6 +15,5 @@ public class EmployeeService {
     }
 
     public List<Employee> getEmployees() {
-        return employeeRepository.getAll();
-    }
+        return IteratorUtils.toList(employeeRepository.findAll().iterator());    }
 }

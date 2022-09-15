@@ -1,9 +1,7 @@
 package com.example.tddspringbootrest.domain;
 
-import java.util.List;
+import org.springframework.data.repository.CrudRepository;
 
-public class EmployeeRepository {
-    public List<Employee> getAll() {
-        return null;
-    }
+public interface EmployeeRepository extends CrudRepository<Employee,Long> {
+
 }

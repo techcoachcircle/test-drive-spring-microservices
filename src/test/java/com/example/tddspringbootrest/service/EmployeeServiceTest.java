@@ -23,7 +23,7 @@ public class EmployeeServiceTest {
         List<Employee> employees = new ArrayList<>();
         employees.add(new Employee(1,"John Doe",25));
         employees.add(new Employee(2,"Jane Davis",30));
-        given(employeeRepository.getAll()).willReturn(employees);
+        given(employeeRepository.findAll()).willReturn(employees);
 
         EmployeeService employeeService = new EmployeeService(employeeRepository);
         List<Employee> returnedEmployees = employeeService.getEmployees();
